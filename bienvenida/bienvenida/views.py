@@ -13,4 +13,3 @@ def mostrar_bienvenida(request):
 def lista_productos (request):
     productos = models.Producto.objects.all()
     return render (request, 'productos/lista.html',{'productos':productos})
-
