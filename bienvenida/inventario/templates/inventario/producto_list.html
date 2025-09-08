@@ -1,9 +1,34 @@
 {% extends 'inventario/base.html' %}
+{% load static %}
 
 
 {% block title %} Vista Productos  {% endblock %} 
 
-{% block header %} ╰(*°▽°*)╯ {% endblock %} 
-{% block breadcrumb %}{% endblock %} 
-{% block content %}  {% endblock %} 
-{% block footer %}  {% endblock %} 
+{% block header %} 
+<header>
+    <h1>Vista Productos ☆*: .｡. o(≧▽≦)o .｡.:*☆</h1>
+</header>
+{% endblock %} 
+{% block breadcrumb %}
+<a class="text-cyan-500" href="/inventario/producto">/inventario/producto</a>
+{% endblock %} 
+{% block content %}
+<section>
+    <h2>Productos Disponibles</h2>
+    <p>Aqui encontraras las mejores frutas</p>
+    <ul>
+        {% for producto in Productos %}
+        <li class="flex flex-col gap-1">
+            <span>{{producto.nombre}}</span>
+            <span>{{producto.descripcion}}</span>
+            <span>{{producto.precio}}</span>
+            <span>{{producto.stock}}</span>
+        </li>
+         {% endfor %} 
+    </ul>
+</section>
+  {% endblock %} 
+{% block footer %} 
+<h1>Hola mundo</h1>
+
+ {% endblock %} 
