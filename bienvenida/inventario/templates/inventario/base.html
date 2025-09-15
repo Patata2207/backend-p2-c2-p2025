@@ -1,38 +1,24 @@
-<head>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       {% block title %}
+        Inventario
       {% endblock %}
     </title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  
-  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
-  
-    <header class="bg-blue-700 text-white p-6 shadow-md">
-      <div class="container mx-auto">
-        {% block header %}
-        {% endblock %}
-      </div>
-    </header>
-  
-    <nav class="bg-white shadow-sm py-3">
-      <div class="container mx-auto px-4">
-        {% block breadcrumb %}
-        {% endblock %}
-      </div>
+
+  <body class="bg-gray-100 text-gray-800">
+    <nav class="bg-blue-600 p-4 text-white">
+      <a href="{% url 'lista_productos' %}" class="font-bold">Inventario</a>
     </nav>
-  
-    <main class="flex-grow container mx-auto px-4 py-8">
+    <div class="container mx-auto p-4">
       {% block content %}
+
       {% endblock %}
-    </main>
-  
-    <footer class="bg-violet-500 text-white p-6 mt-10 shadow-inner">
-      <div class="container mx-auto text-center text-sm">
-        {% block footer %}
-        {% endblock %}
-      </div>
-    </footer>
-  
+    </div>
   </body>
-  
+</html>

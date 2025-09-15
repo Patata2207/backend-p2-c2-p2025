@@ -19,9 +19,9 @@ from django.urls import path, include
 
 from . import views
 
+from django.urls import include, path
+from django.contrib import admin
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('inicio/',views.mostrar_bienvenida,name = "Bienvenida"),
-    path('productos/',views.lista_productos,name = "Productos" ),
-    path('inventario/', include('inventario.urls'))
+    path("admin/", admin.site.urls),
+    path("", include("inventario.urls")),
 ]

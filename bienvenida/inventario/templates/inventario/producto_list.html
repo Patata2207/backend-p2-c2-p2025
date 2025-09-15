@@ -16,9 +16,9 @@
 <section>
     <h2>Productos Disponibles</h2>
     <p>Aqui encontraras las mejores frutas</p>
-    <ul>
-        {% for producto in Productos %}
-        <li class="flex flex-col gap-1">
+    <ul class="p-4 bg-gray-300 border">
+        {% for producto in object_list %}
+        <li class="flex flex-col gap-1 bg-white p-2 border rounded">
             <span>{{producto.nombre}}</span>
             <span>{{producto.descripcion}}</span>
             <span>{{producto.precio}}</span>
